@@ -12,7 +12,7 @@ public class MapManager : MonoBehaviour {
 	public  int startY;
 
 	public int[,] mazeNum=new int[,]{
-		{1,0,1,0,1,0,1,0,1,0},
+		{1,0,1,1,1,1,1,1,1,0},
 		{0,1,0,1,0,1,0,1,0,1},
 		{1,0,1,0,1,0,1,0,1,0},
 		{0,1,0,1,0,1,0,1,0,1},
@@ -25,9 +25,9 @@ public class MapManager : MonoBehaviour {
 	}; 
 
 	void Start () {
-		for (int y = 0; y < 10; y++)
+		for (int x = 0; x < 10; x++)
 		{
-			for (int x = 0; x < 10; x++)
+			for (int y = 0; y < 10; y++)
 			{
 				if (mazeNum [x, y] == 0) {
 					Instantiate (black, new Vector3 (startX + 2*(x - 1), startY + 2*(y - 1), 0), Quaternion.identity);
